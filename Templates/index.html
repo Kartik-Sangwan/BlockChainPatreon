@@ -1,299 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Imployie</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-    <link href="../static/index.css" rel="stylesheet" />
-    <!-- <script>
-        // might not be working
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector("#loader-view").remove();
-        });
-    </script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Chain Patreon</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <script src="https://kit.fontawesome.com/4d3cd55dc6.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-    <!-- Loader -->
-    <div id="loader-view">
-        <div class="spinner-border text-primary loader" role="status">
-            <span class="sr-only">Loading...</span>
+    <nav>
+        <div class="logo">
+            <a href=""><img src="../assets/logo.png" alt="logo"></a>
+            <ul class="navigation">
+                <li><a href="#">Product <i class="fas fa-chevron-down fa-sm"></i></a>
+                    <ul class="dropdown first">
+                        <li><a href="#">Lite</a>
+                        <p>Simple tool to set up recurring support from your fans</p></li>
+                        <li><a href="#">Pro</a>
+                        <p>All the tools to build and grow a thriving membership business</p></li>
+                        <li><a href="#">Premium</a>
+                        <p>For established creators and creative businesses</p></li>
+                    </ul>
+                </li>
+                <li><a href="#">For creators <i class="fas fa-chevron-down fa-sm"></i></a>
+                    <ul class="dropdown second">
+                        <li><a href="#"><i class="fas fa-microphone-alt fa-lg nav-icon"></i> Podcasters</a></li>
+                        <li><a href="#"><i class="fas fa-video fa-lg nav-icon"></i> Video Creators</a></li>
+                        <li><a href="#"><i class="fas fa-guitar fa-lg nav-icon"></i> Musicians</a></li>
+                        <li><a href="#"><i class="fas fa-paint-brush fa-lg nav-icon"></i> Visual Artist</a></li>
+                        <li><a href="#"><i class="far fa-comments fa-lg nav-icon"></i> Communities</a></li>
+                        <li><a href="#"><i class="fas fa-edit fa-lg nav-icon"></i> Writes & Journalists</a></li>
+                        <li><a href="#"><i class="fas fa-gamepad fa-lg nav-icon"></i> Gaming Creators</a></li>
+                        <li><a href="#"><i class="far fa-heart fa-lg nav-icon"></i> Nonprofits</a></li>
+                        <li><a href="#"><i class="fas fa-chalkboard-teacher fa-lg nav-icon"></i> Tutorials and Education</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt fa-lg nav-icon"></i> Local Businesses</a></li>
+                        <li><a href="#"><i class="fas fa-cube fa-lg nav-icon"></i> Creators-of-all-kinds</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources <i class="fas fa-chevron-down fa-sm"></i></a>
+                    <ul class="dropdown third">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Creator Community</a></li>
+                        <li><a href="#">Patreon U</a></li>
+                        <li><a href="#">App Directory</a></li>
+                        <li><a href="#">Help Center & FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Starter kits</a></li>
+            </ul>
         </div>
-    </div>
+        <div class="login">
+            <div class="login-1">
+                <a href="#">Log in</a>
+            </div>
+            <div class="login-2">
+                <button>Create on Patreon</button>
+            </div>
+            <div class="mobile-nav-icon">
+                <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+            </div>
+        </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light bg-custom-color sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img id="logo" src="../static/img/Logos-1/header.png" alt="logo.png" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team-section">Creators</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">Subscribers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">Connect</a>
-                    </li>
-                    
-                </ul>
+        <div class="search">
+            <div class="search-line">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Find a creator">
             </div>
         </div>
     </nav>
 
-    <!--- Image Slider -->
-    <div id="slides" data-ride="carousel" class="carousel slide">
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0" class="active"></li>
-            <li data-target="#slides" data-slide-to="1"></li>
-            
-        </ul>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../static/world_image.jpeg" alt="" class="slider-image" width="100%" />
-                <div class="carousel-caption">
-                    <h1 class="display-2">BlockChainPatreon</h1>
-
-                    <h3>Blockchain based payments solution for creators</h3>
-                    <button type="button" class="btn btn-outline-light btn-lg">DEMO</button>
-                    <button type="button" class="btn btn-primary btn-lg">GET STARTED</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../static/blockchain.jpeg" alt="" class="slider-image"  width="100%"/>
-                <div class="carousel-caption">
-                    <h3>Decentralised platform for creators to get full value for their content.</h3>
-                    <button type="button" class="btn btn-outline-light btn-lg">DEMO</button>
-                    <button type="button" class="btn btn-primary btn-lg">GET STARTED</button>
-                </div>
-            </div>
+    <div class="intro-wrapper">
+        <div class="intro-text">
+            <h1>The system for creative people is broken</h1>
+            <p>It puts algorithms over ideas. Quantity over quality. What’s easy to sell over what’s good. Money, brands, and just about everything else over the people who actually create.</p>
+            <p>People say that’s just the way it is. We say, fuck that. Let’s put creativity over everything.</p>
+            <button>Create on Patreon</button>
         </div>
-
-    </div>
-
-    <!--- Welcome Section -->
-    <div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12">
-                <h1 class="display-4">Attract subscribers at the best possible rates.</h1>
+        <div class="intro-photos">
+            <div>
+                <img src="../assets/intro1.png" alt="">
             </div>
-            <hr />
-            <div class="col-12">
-                <p class="lead">
-                    Welcome to BlockchainPateron! We provide a secure and private way to do build loyal customer base at 0% fees. 
-                </p>
+            <div>
+                <img src="../assets/intro2.png" alt="">
+            </div><div>
+                <img src="../assets/intro3.png" alt="">
+            </div><div>
+                <img src="../assets/intro4.png" alt="">
+            </div><div>
+                <img src="../assets/intro5.png" alt="">
+            </div><div>
+                <img src="../assets/intro6.png" alt="">
             </div>
         </div>
     </div>
 
-    <!--- Three Column Section -->
-    <div class="container-fluid padding off-white">
-        <div class="row text-center padding">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <!-- <i class="fas fa-code"></i> -->
-                <img src="../static/img/maple.png" width="87px" />
-                <h3>Canadian Company</h3>
-                <p>Homebrewed company based in Toronto.</p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <i class="fa fa-lock fa-6x" aria-hidden="true" style="color:darkorange"></i>
-                <h3>Data Security</h3>
-                <p>Due to the decentralised nature of the appliacation no data about payments of users is stored with us.</p>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <i class="fa fa-credit-card fa-6x" style="color:cornflowerblue"></i>
-                <h3>Secure payments</h3>
-                <p>Transactions take place with blockchain</p>
-            </div>
+    <div class="artist-wraper">
+        <div class="artist-quote">
+            <h2>“I like the idea of Patreon because it's really simple and it's about bringing things back to artists making art.”</h2>
+        </div>
+        <div class="artist-photo">
+            <img src="../assets/artist.png" alt="">
+            <h3>M.I.A</h3>
+            <p>Musician and artist</p>
         </div>
     </div>
-    <hr class="my-4" />
-    </div>
-    <!--- Two Column Section -->
-    <div class="container-fluid padding">
-        <div class="row padding">
-            <div class="col-lg-6">
-                <!-- <h2>Your data is protected with us.</h2>
-                    <p>
-                        We completely value the data trusted with us and don't share or sell it with any unauthorized third parties.
-                    </p>
-                    <br />
-                    <a href="#" class="btn btn-primary">Terms and conditions</a> -->
-                <h2>Creators:
-                    <h4>Build a customer base!</h4>
-                </h2>
-                <ul>
-                    <li>Support podcasts, tutorials, video, music, game creators and lots more</li>
-                    <li>Proper invoice and summary of past payments recieved</li>
-                    <li>0% fess</li>
-                    <li></li>
 
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <img src="../static/img/employer.jpg" alt="" class="image-fluid" />
-            </div>
+    <div class="icons-wraper">
+        <div class="icons-main">
+            <h1>What is Patreon?</h1>
+            <p>Patreon helps you build direct relationships with your most engaged fans. You offer them benefits like exclusive content, community, or insight into your creative process in exchange for a monthly subscription.</p>
         </div>
-        <div class="row padding">
-            <div class="col-lg-6">
-                <img src="../static/img/desk.png" alt="" class="image-fluid" />
-            </div>
-            <div class="col-lg-6">
-                <h2>Subscribers:
-                    <h4>Help pay down student loan early!</h4>
-                </h2>
-                <ul>
-                    <li>Buy into NFT's of creators</li>
-                    <li>Pay for material your are intersted in</li>
-                    <li>Regular subscription and one time subscription options</li>
-                    <li>0% fees</li>
-
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- </div> -->
-
-    <hr class="my-4" />
-
-    <!--- Meet the team -->
-    <div id="team-section" class="off-white">
-        <div class="container-fluid padding">
-            <div class="row welcome text-center">
-                <div class="col-12">
-                    <h1 class="display-4">Meet the Team</h1>
-                    <hr />
+        <div class="icons-features">
+            <div class="icons-feature">
+                <div class="feature-icon">
+                    <img src="../assets/icon1.png" alt="">
+                </div>
+                <div class="feature-text">
+                    <h2>Meaningful connections</h2>
+                    <p>Connect with your audience directly in an ad-free and troll-free environment. Enjoy healthier, kinder, more meaningful interactions.</p>
                 </div>
             </div>
-        </div>
-        <!--- Cards -->
-
-        <div class="container-fluid padding">
-            <div class="row padding">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card">
-                        <img class="card-img-top" src="../static/img/team1.jpeg" alt="" />
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Aditya Goyal
-                            </h4>
-                            <p>
-                                Undergraduate Computer Science student at University Of Toronto.
-                            </p>
-                            <a target="_blank" href="https://www.linkedin.com/in/adi-goyal/" class="btn btn-outline-secondary">Linkedin</a>
-                        </div>
-
-                    </div>
+            <div class="icons-feature">
+                <div class="feature-icon">
+                    <img src="../assets/icon2.png" alt="">
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card">
-                        <img class="card-img-top" src="../static/img/team2.jpg" alt="" />
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Kartik Sangwan
-                            </h4>
-                            <p>
-                                Undergraduate Computer Science student at University of Toronto.
-                            </p>
-                            <a target="_blank" href="https://www.linkedin.com/in/kartik-sangwan-293b81125/" class="btn btn-outline-secondary">Linkedin</a>
-                        </div>
-                    </div>
+                <div class="feature-text">
+                    <h2>Creative control</h2>
+                    <p>Create what you want and what your audience loves. You don’t have to conform to popular taste or the constraints of ad-based monetization models.</p>
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card">
-                        <img class="card-img-top" src="../static/img/team3.jpg" alt="" />
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Rishabh Sharma
-                            </h4>
-                            <p>
-                                Rishabh is a MBA graduate from University of Michigan.
-                            </p>
-                            <a target="_blank" href="https://www.linkedin.com/in/akul237/" class="btn btn-outline-secondary">Linkedin</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="icons-feature">
+                <div class="feature-icon">
+                    <img src="../assets/icon3.png" alt="">
+                </div>
+                <div class="feature-text">
+                    <h2>Reliable income</h2>
+                    <p>Generate predictable income from your work through members who pay you a monthly subscription.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--- Connect -->
-    <div id="connect">
-        <div class="container-fluid padding">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2>Connect</h2>
-                </div>
-                <div class="col-12 social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/imployiee/about/"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section id="who"><h1>Who uses Patreon?</h1>
+    <div class="who-wraper">
 
-    <!--- Footer -->
+        <div class="who">
+            <img src="../assets/who1.png" alt="">
+            <button>See page</button>
+            <h2>Einstürzende Neubauten</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who2.png" alt="">
+            <button>See page</button>
+            <h2>M.I.A</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who3.png" alt="">
+            <button>See page</button>
+            <h2>Berlin Food Stories</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who4.png" alt="">
+            <button>See page</button>
+            <h2>Loish</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who5.png" alt="">
+            <button>See page</button>
+            <h2>Lioba Brueckner</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who6.png" alt="">
+            <button>See page</button>
+            <h2>Beardyman</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who7.png" alt="">
+            <button>See page</button>
+            <h2>RedHanded</h2>
+        </div>
+        <div class="who">
+            <img src="../assets/who8.png" alt="">
+            <button>See page</button>
+            <h2>Jim'll Paint It</h2>
+        </div>
+    </div></section>
+
     <footer>
-        <div class="container-fluid padding">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img src="../static/img/Logos/logo_transparent.png" alt="" width="200px" />
-                    <hr class="light" />
-                    <p>xxx-xxx-xxxxx</p>
-                    <p>imployie@gmail.com</p>
-                    <p>Toronto</p>
-                    <p>Ontario, Canada</p>
-                </div>
-                <div class="col-md-4">
-                    <br />
-                    <br />
-                    <br />
-                    <!-- <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br /> -->
-
-                    <hr class="light" />
-                    <p>Our Hours</p>
-                    <p>Monday-Friday: 9:00am - 5:00pm</p>
-                    <p>Saturday: 10:00am - 4:00pm</p>
-                    <p>Sunday: Closed</p>
-                </div>
-
-                <div class="col-12">
-                    <hr class="light-100" />
-                    <h5>&copy; Imployiecopyright2020</h5>
-                </div>
+        <div class="footer-item">
+            <div class="footer-logo">
+                <img src="../assets/logo2.png" alt="">
             </div>
+            <a href="#"><div class="netherlands">
+                <img src="../assets/nl.png" alt="">
+                <p>Netherlands</p>
+            </div></a>
         </div>
+        <div class="footer-item">
+            <div class="social-icons"><i class="fab fa-twitter fa-lg"></i></div>
+            <div class="social-icons"><i class="fab fa-facebook-f fa-lg"></i></div>
+            <div class="social-icons"><i class="fab fa-instagram fa-lg"></i></div>
+        </div>
+        <div class="footer-item">
+            <ul>
+                <li>PRODUCT</li>
+                <li><a href="#">Lite</a></li>
+                <li><a href="#">Pro</a></li>
+                <li><a href="#">Premium</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <ul>
+                <li>FOR CREATORS</li>
+                <li><a href="#">Video Creators</a></li>
+                <li><a href="#">Musicians</a></li>
+                <li><a href="#">Visual Artists</a></li>
+                <li><a href="#">Writers & Journalists</a></li>
+                <li><a href="#">Communities</a></li>
+                <li><a href="#">Gaming Creators</a></li>
+                <li><a href="#">Nonprofits</a></li>
+                <li><a href="#">Tutorials and Education</a></li>
+                <li><a href="#">Local Businesses</a></li>
+                <li><a href="#">Creators-of-all-kinds</a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <ul>
+                <li>RESOURCES</li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Patreon U</a></li>
+                <li><a href="#">Help Center & FAQ</a></li>
+                <li><a href="#">App Directory</a></li>
+                <li><a href="#">Developers</a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <ul>
+                <li>COMPANY</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Policy & Terms</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <ul>
+                <li></li>
+                <li>&copy; Patreon</li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
         </div>
     </footer>
 </body>
-
 </html>
