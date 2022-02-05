@@ -7,6 +7,7 @@ app = Flask(__name__)
 def main():	
 	return render_template('index.html')
 
+
 @app.route("/creators")
 def creators():	
 	return render_template('creators.html')

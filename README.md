@@ -1,5 +1,5 @@
 # BlockChainPatreon
-The is a blockchain based patreon defi app
+This is a blockchain based patreon defi app
 
 To run the app: <br>
 pip install flask <br>
